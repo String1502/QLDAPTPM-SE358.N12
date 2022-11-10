@@ -1,0 +1,224 @@
+<div class='content'>
+    <div class='container'>
+        <div class='page-title' style='margin-bottom: 20px;'>
+            <h3>Potential Student management</h3>
+        </div>
+        <!-- Form insert new student -->
+        <div id='insertForm' class='col-lg-12'>
+            <div class='card'>
+                <div class='card-header'>Thêm học sinh tiềm năng mới</div>
+                <div class='card-body'>
+                    <h5 class='card-title'>Điền thông tin học sinh tiềm năng vào bên dưới:</h5>
+                    <form class='needs-validation' novalidate accept-charset='utf-8'>
+                        <div class='row g-2'>
+                            <div class='mb-3 col-md-6'>
+                                <label for='text' class='form-label'>Họ tên</label>
+                                <input type='text' class='form-control' name='hoten' placeholder='Họ tên' required />
+                            </div>
+                            <div class='mb-3 col-md-3'>
+                                <label for='text' class='form-label'>Số điện thoại</label>
+                                <input
+                                    type='number'
+                                    class='form-control'
+                                    name='sdt'
+                                    placeholder='Số điện thoại'
+                                    required
+                                />
+                            </div>
+                        </div>
+                        <div class='mb-3'>
+                            <label for='address' class='form-label'>Địa chỉ</label>
+                            <input
+                                type='text'
+                                class='form-control'
+                                name='address'
+                                placeholder='Ex: Số 12, Linh Trung, Thủ Đức'
+                                required
+                            />
+                        </div>
+                        <div class='row g-2'>
+                            <div class='mb-3 col-md-4'>
+                                <label for='city' class='form-label'>Thời gian rảnh</label>
+                                <input
+                                    type='text'
+                                    class='form-control'
+                                    name='thoiGianRanh'
+                                    placeholder='Thứ 3,5 tối'
+                                    required
+                                />
+                            </div>
+                            <div class='mb-3 col-md-3'>
+                                <label for='city' class='form-label'>Lớp muốn học</label>
+                                <input type='text' class='form-control' name='thoiGianRanh' placeholder='' required />
+                            </div>
+                            <div class='mb-3 col-md-3'>
+                                <label for='zip' class='form-label'>Ngày nhận thông tin đăng kí</label>
+                                <input
+                                    type='date'
+                                    class='form-control'
+                                    name='ngayNhanTT'
+                                    placeholder='01/01/2022'
+                                    required
+                                />
+                            </div>
+                        </div>
+                        <button type='submit' class='btn btn-primary'><i class='fas fa-save'></i>
+                            Save</button>
+                        <button type='submit' class='btn btn-danger'><i class='fas fa-undo'></i>
+                            Cancel</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Form update new student -->
+        <div id='updateForm' class='col-lg-12'>
+            <div class='card'>
+                <div class='card-header'>Cập nhật học sinh tiềm năng mới</div>
+                <div class='card-body'>
+                    <h5 class='card-title'>Cập nhật thông tin học sinh tiềm năng vào bên dưới:</h5>
+                    <form class='needs-validation' novalidate accept-charset='utf-8'>
+                        <div class='row g-2'>
+                            <div class='mb-3 col-md-6'>
+                                <label for='text' class='form-label'>Họ tên</label>
+                                <input type='text' class='form-control' name='hoten' placeholder='Họ tên' required />
+                            </div>
+                            <div class='mb-3 col-md-3'>
+                                <label for='text' class='form-label'>Số điện thoại</label>
+                                <input
+                                    type='number'
+                                    class='form-control'
+                                    name='sdt'
+                                    placeholder='Số điện thoại'
+                                    required
+                                />
+                            </div>
+                        </div>
+                        <div class='mb-3'>
+                            <label for='address' class='form-label'>Địa chỉ</label>
+                            <input
+                                type='text'
+                                class='form-control'
+                                name='address'
+                                placeholder='Ex: Số 12, Linh Trung, Thủ Đức'
+                                required
+                            />
+                        </div>
+                        <div class='row g-2'>
+                            <div class='mb-3 col-md-4'>
+                                <label for='city' class='form-label'>Thời gian rảnh</label>
+                                <input type='text' class='form-control' name='thoiGianRanh' placeholder='' required />
+                            </div>
+                            <div class='mb-3 col-md-3'>
+                                <label for='city' class='form-label'>Lớp muốn học</label>
+                                <input type='text' class='form-control' name='thoiGianRanh' placeholder='' required />
+                            </div>
+                            <div class='mb-3 col-md-3'>
+                                <label for='zip' class='form-label'>Ngày nhận thông tin đăng kí</label>
+                                <input
+                                    type='date'
+                                    class='form-control'
+                                    name='ngayNhanTT'
+                                    placeholder='01-01-2022'
+                                    required
+                                />
+                            </div>
+                        </div>
+                        <button type='submit' class='btn btn-primary'><i class='fas fa-save'></i>
+                            Save</button>
+                        <button type='submit' class='btn btn-danger'><i class='fas fa-undo'></i>
+                            Cancel</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class='row'>
+            <div class='col-md-12 col-lg-12'>
+                <div class='card'>
+                    <div class='card-header'>Student list</div>
+                    <div class='card-body'>
+                        <div class='table-responsive'>
+                            <table class='table'>
+                                <thead>
+                                    <tr>
+                                        <th>Mã HV</th>
+                                        <th>Họ tên</th>
+                                        <th>Địa chỉ</th>
+                                        <th>SDT</th>
+                                        <th>TG rảnh</th>
+                                        <th>Mã lớp MH</th>
+                                        <th>Ngày đăng ký</th>
+                                        <th> </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope='row'>123</th>
+                                        <td>Mark Zuck</td>
+                                        <td>Số 23, đường Hoàng Văn Thụ, Phường Long Bình, Quận 9
+                                        </td>
+                                        <td>0362103314</td>
+                                        <td>Thứ 3,5,7 tối</td>
+                                        <td>ielts_01</td>
+                                        <td>29/03/2022</td>
+                                        <th>
+                                            <div
+                                                class='btn-group btn-group-sm'
+                                                role='group'
+                                                aria-label='Small button group'
+                                            >
+                                                <button
+                                                    type='button'
+                                                    id='updateStudentBtn'
+                                                    class='btn btn-primary'
+                                                >Fix</button>
+                                                <button
+                                                    type='button'
+                                                    class='btn btn-danger deleteStudentBtn'
+                                                >Del</button>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th scope='row'>243</th>
+                                        <td>Bob Alie</td>
+                                        <td>Số 15, đường Tản Viên, Quận Tân Bình </td>
+                                        <td>036210321</td>
+                                        <td>Thứ 2,4,6 chiều</td>
+                                        <td>ielts_02</td>
+                                        <td>29/03/2022</td>
+                                        <th>
+                                            <div
+                                                class='btn-group btn-group-sm'
+                                                role='group'
+                                                aria-label='Small button group'
+                                            >
+                                                <button
+                                                    type='button'
+                                                    id='updateStudentBtn'
+                                                    class='btn btn-primary'
+                                                >Fix</button>
+                                                <button
+                                                    type='button'
+                                                    class='btn btn-danger deleteStudentBtn'
+                                                >Del</button>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th scope='row' colspan='8' style='text-align: right;'>
+                                            <button type='button' id='addStudentBtn' class='btn btn-primary'>Thêm học
+                                                sinh tiềm năng</button>
+                                        </th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
