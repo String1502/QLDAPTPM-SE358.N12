@@ -1,0 +1,166 @@
+ <div class="container col-10">
+    <div class="row my-3" >
+      <h3>
+        Lớp
+      </h3>
+    </div>
+    {{!-- form điền thông tin --}}
+    <div class="row card mb-3">
+        <div class="card-header">
+          Thêm Lớp mới
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Điền thông tin lớp vào bên dưới:</h5>
+          <form action="">
+            {{!-- Trình độ --}}
+             <div class="row mb-3">
+                    <div>
+                      <label class="form-label">Trình độ</label>
+                      <select class="form-select">
+                          <option selected>Trình độ</option>
+                          {{#each TrinhDos}}
+                          <option value="{{this.ID}}">{{this.Ten}}</option>
+                          {{/each}}
+                      </select>
+                    </div>
+             </div>
+              {{!--  Ngày bắt đầu, kết thúc --}}
+            <div class="row">
+                <div class="col  mb-3">
+                    <label class="form-label">Ngày bắt đầu</label>
+                    <input type="Date" class="form-control">
+                </div>
+               <div class="col  mb-3">
+                    <label class="form-label">Ngày kết thúc</label>
+                    <input type="Date" class="form-control">
+                </div>
+            </div>
+              {{!-- Giảng viên, số buổi học --}}
+            <div class="row ">
+
+                <div class="col mb-3">
+                    <label class="form-label">Giảng viên</label>
+                    <select class="form-select">
+                          <option selected>Giảng viên</option>
+                          {{#each GiangViens}}
+                          <option value="{{this.ID}}">{{this.Ten}}</option>
+                          {{/each}}
+                      </select>
+                </div>
+
+                 <div class="col  mb-3">
+                    <label class="form-label">Số buổi học</label>
+                    <input type="number" value="12" class="form-control">
+                </div>
+              
+            </div>
+
+            {{!-- Học phí, số học viên tối đa --}}
+            <div class="row ">
+
+                <div class="col mb-3">
+                    <label class="form-label">Học phí</label>
+                    <input type="number" value="5000000" class="form-control">
+                </div>
+
+                 <div class="col  mb-3">
+                    <label class="form-label">Số học viên tối đa</label>
+                    <input type="number" value="30" class="form-control">
+                </div>
+              
+            </div>
+
+             {{!-- Lịch học --}}
+            <div class="row">
+               <label for="" class="form-label">Lịch học</label>
+            </div>
+
+            <div class="row d-flex justify-content-center mb-3">
+                <div class="col-md-3 col-6">
+                  <select class="form-select">
+                        <option value="1" selected>Thứ?</option>
+                        <option value="2">Thứ 2</option>
+                        <option value="3">Thứ 3</option>
+                        <option value="4">Thứ 4</option>
+                        <option value="5">Thứ 5</option>
+                        <option value="6">Thứ 6</option>
+                        <option value="7">Thứ 7</option>
+                        <option value="8">Chủ nhật</option>
+                    </select>
+                </div>
+                <div class="col-md-3 col-6">
+                   <select class="form-select">
+                        <option selected>Ca?</option>
+                         {{#each Cas}}
+                        <option value="{{this.ID}}">{{this.ThongTin}}</option>
+                        {{/each}}
+                    </select>
+                </div>
+            </div>
+            {{!-- Button thêm buổi học  --}}
+            <div class="row justify-content-center mb-3">
+              <div class="col-auto">
+                             <button type='submit' class='btn btn-primary'><i class="fa-sharp fa-solid fa-plus"></i> Thêm buổi học</button>
+              </div>
+            </div>
+             <button type='submit' class='btn btn-primary'><i class='fas fa-save'></i> Lưu</button>
+             <button type='submit' class='btn btn-danger'><i class='fas fa-undo'></i> Hủy</button>
+          </form>
+        </div>
+    </div>
+    {{!-- Tìm kiếm lớp --}}
+    <div class="row mb-2">
+      <div class="col offset-6">
+        <input type="text" class="form-control" placeholder="Nhập tên lớp">
+      </div>
+      <div class="col-auto ps-0">
+          <button type='button' class='btn btn-outline-secondary' id='input-group-button-right'>
+                  <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+                </button>
+      </div>
+    </div>
+
+    {{!-- Table danh sách lớp --}}
+      <div class="row card">
+        <div class="card-header">
+             Danh sách lớp
+        </div>  
+        <div class="card-body">
+            <table class="table">
+          <thead>
+            <tr>
+              <th class="col-2">Mã lớp</th>
+              <th class="col-2">Tên lớp</th>
+              <th class="col-2">Trình độ</th>
+              <th class="col-2">Ngày bắt đầu</th>
+              <th class="col-2">Ngày kết thúc</th>
+              <th class="col-0.5"></th>
+              <th class="col-0.5"></th>
+              <th class="col-1"></th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each Classes}}
+              <tr class="" >
+                <th class="lh-lg" >{{this.ID}} </th>
+                <th class="lh-lg fw-normal ">{{this.Name}}</th>
+                <th class="lh-lg fw-normal">{{this.Level}}</th>
+                <th class="lh-lg fw-normal">{{this.DayStart}}</th>
+                <th class="lh-lg fw-normal">{{this.DayEnd}}</th>
+                <th class=" ">
+                  <button type="button" class="btn btn-primary "><i class="fa-solid fa-trash"></i></button>
+                </th>
+                <th class="">
+                  <button type="button" class="btn btn-primary "><i class="fa-solid fa-pencil"></i></button>
+                </th>
+              </tr>
+          
+            {{/each}}
+          </tbody>
+        </table>
+          <div class="col-auto d-flex justify-content-end">
+                      <button type="button" class="btn btn-primary">Thêm lớp </button>
+              </div>
+        </div> 
+ </div>     
+ </div> 

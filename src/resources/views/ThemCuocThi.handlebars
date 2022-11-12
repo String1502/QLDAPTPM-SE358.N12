@@ -1,0 +1,71 @@
+ <div class="container col-10">
+    <div class="row my-3" >
+      <h3>
+        Thêm cuộc thi
+      </h3>
+    </div>
+    <dic class="row">
+        <div class="col-3">
+            <select name="" id="" class="form-select"></select>
+               <option selected>{{LoaiCuoThis.select}}</option>
+                                {{#each LoaiCuoThis}}
+                                <option value="{{this.ID}}">{{this.Ten}}</option>
+                                {{/each}}
+        </div>
+        <div class="col-9">
+            {{!-- Thông tin cuộc thi--}}
+            <div class="row card mb-5">
+                <div class="card-header">
+                    Thông tin cuộc thi
+                </div>
+                <div class="card-body">
+
+                    <div class="row mb-3">
+                        <div class="col-6">
+                            <div class="form-label">
+                                Ngày thi
+                            </div>
+                            <input type="Date" class="form-control">
+                        </div>
+                        <div class="col-6">
+                            <div class="form-label">
+                                Giờ thi
+                            </div>
+                            <input type="Time" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-6">
+                            <div class="form-label">
+                                Giám thị
+                            </div>
+                            <select class="form-select">
+                                <option selected>Giảng viên</option>
+                                {{#each GiangViens}}
+                                <option value="{{this.ID}}">{{this.Ten}}</option>
+                                {{/each}}
+                            </select>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-label">
+                                Trạng thái
+                            </div>
+                             <select class="form-select">
+                                <option value="1">Chưa bắt đầu</option>
+                                <option value="2">Kết thúc</option>
+                                <option value="3">Đã hủy</option>
+                                
+                            </select>
+                        </div>
+                    </div>
+                  
+                </div>
+            </div>
+            {{!-- button thêm tài khoản --}}
+            <div class="row justify-content-end">
+                 <div class="col-auto"><button type="button" class="btn btn-primary">Thêm cuộc thi</button></div>
+            </div>
+        </div>
+    </dic>
+</div>

@@ -1,0 +1,77 @@
+ <div class="container col-10">
+    <div class="row my-3" >
+      <h3>
+        Thêm tài khoản
+      </h3>
+    </div>
+    <dic class="row">
+        <div class="col-3">
+            <select name="" id="" class="form-select"></select>
+               <option selected>{{ChucVus.select}}</option>
+                                {{#each ChucVus}}
+                                <option value="{{this.ID}}">{{this.Ten}}</option>
+                                {{/each}}
+        </div>
+        <div class="col-9">
+            {{!-- Thông tin tài khoản --}}
+            <div class="row card mb-5">
+                <div class="card-header">
+                    Thông tin tài khoản
+                </div>
+                <div class="card-body">
+                    <div class="form-label">
+                        Tên tài khoản
+                    </div>
+                    <div class="mb-3"><input class="form-control" type="text"></div>
+                     <div class="form-label">
+                        Mật khẩu
+                    </div>
+                    <div class="mb-3"><input class="form-control" type="password"></div>
+                     <div class="form-label">
+                        Nhập lại mật khẩu
+                    </div>
+                    <div class="mb-3"><input class="form-control" type="password"></div>
+                </div>
+            </div>
+            {{!-- Thông tin cá nhân --}}
+            <div class="row card mb-3">
+                <div class="card-header">
+                    Thông tin cá nhân
+                </div>
+                <div class="card-body">
+                    <div class="form-label">
+                        Họ tên
+                    </div>
+                    <div class="mb-3"><input class="form-control" type="text"></div>
+                     <div class="form-label">
+                        CCCD
+                    </div>
+                    <div class="mb-3"><input class="form-control" type=""></div>
+                     <div class="row">
+
+                         <div class="col-6">
+                             <div class="form-label">
+                                Ngày sinh
+                             </div>
+                             <div class="mb-3"><input class="form-control" type="Date"></div>
+                         </div>
+
+                         <div class="col-6">
+                             <div class="form-label">
+                              Giới tính
+                             </div>
+                             <select class="form-select">
+
+                                <option value="1" >Nam</option>
+                                <option value="2">Nữ</option>
+                             </select>
+                         </div>
+                     </div>
+                </div>
+            </div>
+            <div class="row justify-content-end">
+                 <div class="col-auto"><button type="button" class="btn btn-primary">Thêm tài khoản</button></div>
+            </div>
+        </div>
+    </dic>
+</div>

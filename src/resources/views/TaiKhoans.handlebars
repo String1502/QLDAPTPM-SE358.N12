@@ -1,0 +1,92 @@
+ <div class="container col-10">
+    <div class="row my-3 justify-content-between" >
+          <div class="col-auto">
+              <h3>
+                Nhóm người dùng
+              </h3>
+          </div>
+                  <div class="col-auto align-items-center">
+                     <button type="button" class="btn btn-primary">Thêm nhóm người dùng </button>
+                  </div>
+    </div>
+
+    {{!-- List nhóm người dùng --}}
+      {{!-- {{#each ChucVus}} --}}
+    <div class="row card mb-5">
+        <div class="card-header">
+            <div class="row">
+            
+                <div class="col-6 d-flex justify-content-start align-items-center">
+                        <div  class="col-auto me-3"><i style="" class="fa-sharp fa-solid fa-circle-user fa-3x">
+                        </i></div>
+                        <div class="col-auto d-flex flex-column ">
+                            {{!-- {{this.Ten}} --}}
+                            <h5>{{this.Ten}}</h5>
+                            {{!-- {{this.SoLuong}} --}}
+                            <h6 class="fw-normal">{{this.SoLuong}}</h6>
+                        </div>
+                </div>
+                <div class="col-6 d-flex justify-content-end align-items-center">
+                          <button type="button" style="height: 38px;" class="btn btn-primary mx-3">Chỉnh sửa </button>
+                         <button type="button" style="height: 38px;"  class="btn btn-primary">Thêm </button>
+                </div>
+            </div>
+            </div>
+            <div class="card-body">
+                <div class="card-title row align-items-center">
+                    <div class="col-md-6 ">
+                        <h5>Danh sách người dùng</h5>
+                    </div>
+                    {{!-- Tìm kiếm tài khoản --}}
+                    <div class="col-md-6">
+                        <div class="row mb-2">
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Nhập họ tên">
+                            </div>
+                            <div class="col-auto ps-0">
+                                <button type='button' class='btn btn-outline-secondary' id='input-group-button-right'>
+                                        <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+                                        </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{!-- List tài khoản --}}
+                <table class="table">
+                    <thead>
+                        <tr>
+                        <th class="col-2">Tên tài khoản</th>
+                        <th class="col-2">Họ tên</th>
+                        <th class="col-2">Ngày sinh</th>
+                        <th class="col-2">CCCD</th>
+                        <th class="col-2">Giới tính</th>
+                        <th class="col-0.5"></th>
+                        <th class="col-0.5"></th>
+                        <th class="col-1"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each TaiKhoans}}
+                        <tr class="" >
+                            <th class="lh-lg fw-normal" >{{this.TenTaiKhoan}} </th>
+                            <th class="lh-lg fw-normal" >{{this.HoTen}} </th>
+                            <th class="lh-lg fw-normal ">{{this.NgaySinh}}</th>
+                            <th class="lh-lg fw-normal">{{this.CCCD}}</th>
+                            <th class="lh-lg fw-normal">{{this.GioiTinh}}</th>
+                            <th class=" ">
+                            <button type="button" class="btn btn-primary "><i class="fa-solid fa-trash"></i></button>
+                            </th>
+                            <th class="">
+                            <button type="button" class="btn btn-primary "><i class="fa-solid fa-pencil"></i></button>
+                            </th>
+                        </tr>
+                    
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+    </div>
+  
+
+    {{!-- {{/each}} --}}
+ </div>

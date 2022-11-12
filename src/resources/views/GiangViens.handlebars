@@ -1,0 +1,123 @@
+ <div class="container col-10">
+    <div class="row my-3" >
+      <h3>
+        Giảng viên
+      </h3>
+    </div>
+    {{!-- form điền thông tin --}}
+    <div class="row card mb-3">
+        <div class="card-header">
+          Thêm giảng viên mới
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Điền thông tin giảng viên vào bên dưới:</h5>
+          <form action="">
+            {{!-- Họ tên --}}
+             <div class="row mb-3">
+                    <div>
+                      <label class="form-label">Họ tên</label>
+                      <input type="text"  class="form-control"  placeholder="Họ tên">
+                    </div>
+             </div>
+              {{!-- Trình độ, sdt --}}
+            <div class="row">
+                <div class="col  mb-3">
+                    <label class="form-label">Trình độ</label>
+                    <div class="">
+                        <select class="form-select">
+                            <option selected>Trình độ</option>
+                            {{#each TrinhDos}}
+                            <option value="{{this.ID}}">{{this.Ten}}</option>
+                            {{/each}}
+                        </select>
+                    </div>
+                </div>
+                <div class="col mb-3">
+                    <label for="" class="form-label">Số điện thoại</label>
+                    <div class="">
+                        <input type="number" class="form-control" value="" placeholder="Ex: 0123456789">
+                    </div>
+                </div>
+                {{!-- <div  class="d-none d-lg-block col d-flex flex-row  align-items-center  mb-3"></div> --}}   
+            </div>
+              {{!-- Địa chỉ,trạng thái --}}
+            <div class="row ">
+
+                <div class="col mb-3">
+                    <label class="form-label">Địa chỉ</label>
+                    <div class="">
+                        <input type="Text" class="form-control" placeholder="Ex: Số 12, Linh Trung, Thủ Đức">
+                    </div>
+                </div>
+
+                <div class="col mb-3">
+                    <label class="form-label">Trạng thái</label>
+                    <div class="">
+                        <select class="form-select">
+                            <option value="1">Còn hoạt động</option>
+                            <option value="2">Ngừng hoạt động</option>
+                        </select>
+                    </div>
+                </div>
+              
+            </div>
+             <button type='submit' class='btn btn-primary'><i class='fas fa-save'></i> Lưu</button>
+             <button type='submit' class='btn btn-danger'><i class='fas fa-undo'></i> Hủy</button>
+          </form>
+        </div>
+    </div>
+    {{!-- Tìm kiếm giảng viên --}}
+    <div class="row mb-2">
+      <div class="col offset-6">
+        <input type="text" class="form-control" placeholder="Nhập tên giảng viên">
+      </div>
+      <div class="col-auto ps-0">
+          <button type='button' class='btn btn-outline-secondary' id='input-group-button-right'>
+                  <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+                </button>
+      </div>
+    </div>
+
+    {{!-- Table danh sách giảng viên --}}
+      <div class="row card">
+        <div class="card-header">
+             Danh sách giảng viên
+        </div>  
+        <div class="card-body">
+          <table class="table">
+          <thead>
+            <tr>
+              <th class="col-1">STT</th>
+              <th class="col-2">Tên giảng viên</th>
+              <th class="col-2">Trình độ</th>
+              <th class="col-2">Số điện thoại</th>
+              <th class="col-3">Địa chỉ</th>
+              <th class="col-1"></th>
+              <th class="col-1"></th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each Teachers}}
+              <tr text-align="center">
+                <th>{{this.ID}}</th>
+                <th class="lh-lg fw-normal">{{this.STT}}</th>
+                <th class="lh-lg fw-normal">{{this.Name}}</th>
+                <th class="lh-lg fw-normal">{{this.Level}}</th>
+                <th class="lh-lg fw-normal">{{this.PhoneNumber}}</th>
+                <th class="lh-lg fw-normal">{{this.Address}}</th>
+                <th class=" ">
+                  <button type="button" class="btn btn-primary "><i class="fa-solid fa-trash"></i></button>
+                </th>
+                <th class="">
+                  <button type="button" class="btn btn-primary "><i class="fa-solid fa-pencil"></i></button>
+                </th>
+              </tr>
+            {{/each}}
+          </tbody>
+        </table>
+          <div class="col-auto d-flex justify-content-end">
+                      <button type="button" class="btn btn-primary">Thêm giảng viên</button>
+              </div>
+        </div> 
+ </div>     
+ </div> 
