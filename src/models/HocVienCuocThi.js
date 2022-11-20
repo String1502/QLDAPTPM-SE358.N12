@@ -3,10 +3,10 @@ const Schema = mongoose.Schema;
 ////
 const HocVienCuocThi = new Schema(
     {
-        MaHocVien_CuocThi: { type: String, maxLength: 255 },
+        MaHocVien_CuocThi: { type: OjectId, maxLength: 255 },
         MaHocVien: { type: String, maxLength: 255 },
         MaCuocThi: { type: String, maxLength: 255 },
-        Diem: { type: String, maxLength: 11 },
+        Diem: { type: int32 },
         TrangThai: { type: String, maxLength: 5 },
     },
     {

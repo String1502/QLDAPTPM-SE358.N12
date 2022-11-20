@@ -1,8 +1,8 @@
 import homeRouter from './home';
-import hocvienRouter from './hocvien';
+import HocVienRouter from './hocvien';
 
 const route = (app) => {
-    app.use('/hocvien', hocvienRouter);
+    app.use('/student', HocVienRouter);
     app.use('/', homeRouter);
 };
 

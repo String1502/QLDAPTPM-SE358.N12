@@ -3,9 +3,9 @@ const Schema = mongoose.Schema;
 ////
 const TrinhDo = new Schema(
     {
-        MaTrinhDo: { type: String, maxLength: 255 },
+        MaTrinhDo: { type: OjectId },
         TenTrinhDo: { type: String, maxLength: 255 },
-        MocDiem: { type: String, maxLength: 255 },
+        MocDiem: { type: int32 },
         MaCTH: { type: String, maxLength: 255 },
         TrangThai: { type: String, maxLength: 255 },
     },

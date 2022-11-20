@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 ////
 const GiangVien = new Schema(
     {
-        MaGiangVien: { type: String, maxLength: 255 },
+        MaGiangVien: { type: OjectId },
         MaTrinhDo: { type: String, maxLength: 255 },
         TenGiangVien: { type: String, maxLength: 255 },
         DiaChi: { type: String, maxLength: 255 },

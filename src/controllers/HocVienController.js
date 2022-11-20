@@ -1,8 +1,12 @@
 const HocVien = require('../models/HocVien');
 
 class HocVienController {
-    index(req, res) {
-        res.send('ok');
+    async index(req, res) {
+        let hocvien = await HocVien.find({});
+
+        return res.render('student', {
+            HocVien: hocvien,
+        });
     }
 
     createHV(req, res) {
@@ -24,7 +28,7 @@ class HocVienController {
 
     async readHV(req, res) {
         const hv = await HocVien.find({});
-        res.send(JSON.stringify(hv)); 
+        res.send(JSON.stringify(hv));
     }
 
     async updateHV(req, res) {

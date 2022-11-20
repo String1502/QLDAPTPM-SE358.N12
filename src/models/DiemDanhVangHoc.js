@@ -3,12 +3,10 @@ const Schema = mongoose.Schema;
 ////
 const DiemDanhVangHoc = new Schema(
     {
-        MaDiemDanh: { type: String, maxLength: 255 },
+        MaDiemDanh: { type: OjectId },
         MaQuaTrinhHoc: { type: String, maxLength: 255 },
-        NgayVangHoc: { type: String, maxLength: 255 },
-        NgayVangHoc: { type: String, maxLength: 255 },
-        NgayVangHoc: { type: String, maxLength: 255 },
-        NgayVangHoc: { type: String, maxLength: 255 },
+        NgayVangHoc: { type: Date },
+        CoPhep: { type: Boolean },
     },
     {
         timestamps: true,

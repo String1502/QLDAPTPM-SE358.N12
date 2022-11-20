@@ -180,58 +180,34 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <th scope='row'>1235</th>
-                                        <td>Mark Zuck</td>
-                                        <td>Số 23, đường Hoàng Văn Thụ, Phường Long Bình, Quận 9 </td>
-                                        <td>0362103314</td>
-                                        <td>112233</td>
-                                        <th>29/03/2022</th>
-                                        <th>Đang học</th>
-                                        <th>
-                                            <div
-                                                class='btn-group btn-group-sm'
-                                                role='group'
-                                                aria-label='Small button group'
-                                            >
-                                                <button
-                                                    type='button'
-                                                    id='updateStudentBtn'
-                                                    class='btn btn-primary'
-                                                >Fix</button>
-                                                <button
-                                                    type='button'
-                                                    class='btn btn-danger deleteStudentBtn'
-                                                >Del</button>
-                                            </div>
-                                        </th>
-                                    </tr>
-                                    <tr>
-                                        <th scope='row'>6345</th>
-                                        <td>Mark Zuck</td>
-                                        <td>S111, Đường Tân Hiệp, Tân Long, Bình Thạnh</td>
-                                        <td>0362103314</td>
-                                        <td>112233</td>
-                                        <th>29/03/2022</th>
-                                        <th>Đang học</th>
-                                        <th>
-                                            <div
-                                                class='btn-group btn-group-sm'
-                                                role='group'
-                                                aria-label='Small button group'
-                                            >
-                                                <button
-                                                    type='button'
-                                                    id='updateStudentBtn'
-                                                    class='btn btn-primary'
-                                                >Fix</button>
-                                                <button
-                                                    type='button'
-                                                    class='btn btn-danger deleteStudentBtn'
-                                                >Del</button>
-                                            </div>
-                                        </th>
-                                    </tr>
+                                    {{#each HocVien}}
+                                        <tr>
+                                            <th scope='row'>1235</th>
+                                            <td>Mark Zuck</td>
+                                            <td>Số 23, đường Hoàng Văn Thụ, Phường Long Bình, Quận 9 </td>
+                                            <td>0362103314</td>
+                                            <td>112233</td>
+                                            <th>29/03/2022</th>
+                                            <th>Đang học</th>
+                                            <th>
+                                                <div
+                                                    class='btn-group btn-group-sm'
+                                                    role='group'
+                                                    aria-label='Small button group'
+                                                >
+                                                    <button
+                                                        type='button'
+                                                        id='updateStudentBtn'
+                                                        class='btn btn-primary'
+                                                    >Fix</button>
+                                                    <button
+                                                        type='button'
+                                                        class='btn btn-danger deleteStudentBtn'
+                                                    >Del</button>
+                                                </div>
+                                            </th>
+                                        </tr>
+                                    {{/each}}
                                     <tr>
                                         <th scope='row' colspan='8' style='text-align: right;'>
                                             <button type='button' id='addStudentBtn' class='btn btn-primary'>Thêm học

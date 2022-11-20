@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 ////
 const HocVien = new Schema(
     {
-        MaHocVien: { type: String, maxLength: 255 },
+        MaHocVien: { type: OjectId },
         HoTen: { type: String, maxLength: 255 },
         DiaChi: { type: String, maxLength: 255 },
         SDT: { type: String, maxLength: 11 },
