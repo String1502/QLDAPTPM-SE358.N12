@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 ////
 const DoanhThuThang = new Schema(
     {
-        MaDoanhThuThang: { type: OjectId, maxLength: 255 },
+        MaDoanhThuThang: mongoose.ObjectId,
         Nam: { type: Int32 },
         DoanhThu: { type: Int64 },
         CongNo: { type: Int64 },

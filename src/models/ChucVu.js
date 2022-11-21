@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 ////
 const ChucVu = new Schema(
     {
-        MaChucVu: { type: OjectId },
+        MaChucVu: mongoose.ObjectId,
         TenChucVu: { type: String, maxLength: 255 },
     },
     {

@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 ////
 const Quyen = new Schema(
     {
-        MaQuyen: { type: OjectId },
+        MaQuyen: mongoose.ObjectId,
         TenQuyen: { type: String, maxLength: 255 },
         TenManHinhDuocLoad: { type: String, maxLength: 255 },
     },

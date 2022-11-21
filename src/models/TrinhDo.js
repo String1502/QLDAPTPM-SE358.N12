@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 ////
 const TrinhDo = new Schema(
     {
-        MaTrinhDo: { type: OjectId },
+        MaTrinhDo: mongoose.ObjectId,
         TenTrinhDo: { type: String, maxLength: 255 },
         MocDiem: { type: int32 },
         MaCTH: { type: String, maxLength: 255 },

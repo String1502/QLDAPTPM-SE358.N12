@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 ////
 const QuaTrinhHoc = new Schema(
     {
-        MaQuaTrinhHoc: { type: OjectId },
+        MaQuaTrinhHoc: mongoose.ObjectId,
         MaHocVien: { type: String, maxLength: 255 },
         MaLop: { type: String, maxLength: 255 },
         SoBuoiVangHoc: { type: Int32 },

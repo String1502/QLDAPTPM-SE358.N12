@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 ////
 const LoaiCuocThi = new Schema(
     {
-        MaLoaiCT: { type: OjectId },
+        MaLoaiCT: mongoose.ObjectId,
         TenLoaiCT: { type: String, maxLength: 255 },
         TrangThai: { type: String, maxLength: 255 },
     },

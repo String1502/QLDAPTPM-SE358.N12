@@ -22,4 +22,8 @@ $(document).ready(function () {
             $(this).parent().parent().parent().remove();
         }
     });
+
+    $('#CreateNewStudentBtn').click(function () {
+        alert('asdaksd');
+    });
 });
